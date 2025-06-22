@@ -1,0 +1,28 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { products } from '../../data/products.js';
+
+const { id } = Astro.params;
+const product = products.find((p) => p.id === id);
+
+if (!product) {
+  throw new Error(`Product not found: ${id}`);
+}
+---
+<Layout title={product.name} description={product.description}>
+  <article itemscope itemtype="http://schema.org/Product" class="max-w-3xl mx-auto p-8">
+    <h1 itemprop="name" class="text-4xl font-bold mb-4">{product.name}</h1>
+    <img
+      itemprop="image"
+      src={product.image}
+      alt={product.name}
+      class="w-full h-96 object-cover mb-6"
+      loading="lazy"
+    />
+    <p itemprop="description" class="mb-6">{product.description}</p>
+    <div itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="text-2xl font-bold">
+      <meta itemprop="priceCurrency" content="USD" />
+      <span itemprop="price">${product.price}</span>
+    </div>
+  </article>
+</Layout>
