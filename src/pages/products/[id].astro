@@ -2,9 +2,17 @@
 import Layout from '../../layouts/Layout.astro';
 import { products } from '../../data/products.js';
 
+// ── ADD THIS BLOCK ───────────────────────────────────────────────────────────
+export async function getStaticPaths() {
+  return products.map((product) => ({
+    params: { id: product.id }
+  }));
+}
+// ─────────────────────────────────────────────────────────────────────────────
+
+// Now it’s safe to read the `id` and look up your product:
 const { id } = Astro.params;
 const product = products.find((p) => p.id === id);
-
 if (!product) {
   throw new Error(`Product not found: ${id}`);
 }
@@ -26,3 +34,4 @@ if (!product) {
     </div>
   </article>
 </Layout>
+
