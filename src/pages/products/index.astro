@@ -1,0 +1,118 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { products } from '../data/products.js';
+---
+
+<Layout title="Our Products - Pure Dairy" description="Explore our complete range of premium dairy products including fresh milk, artisan cheeses, creamy yogurt, and more.">
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-blue-100 to-green-100 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4" data-aos="fade-up">Our Premium Products</h1>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        Discover our complete range of farm-fresh dairy products, carefully crafted with love and delivered with care to your doorstep.
+      </p>
+    </div>
+  </section>
+
+  <!-- Products Grid -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {products.map((product, index) => (
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group" data-aos="fade-up" data-aos-delay={index * 50}>
+            <div class="relative overflow-hidden">
+              <img 
+                src={product.image} 
+                alt={product.name} 
+                class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+              >
+              <div class="absolute top-4 left-4">
+                <span class="bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                  {product.category}
+                </span>
+              </div>
+            </div>
+            
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">{product.name}</h3>
+              <p class="text-gray-600 mb-3 text-sm">{product.description}</p>
+              <p class="text-sm text-gray-500 mb-4">Volume: {product.volume}</p>
+              
+              <div class="flex justify-between items-center">
+               <span class="text-2xl font-bold text-blue-600">${product.price}</span>
+               <button
+                 class="snipcart-add-item bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium text-sm shadow-md"
+                 data-item-id={product.id}
+                 data-item-name={product.name}
+                 data-item-price={product.price}
+                 data-item-description={product.description}
+                 data-item-image={`https://puredairy.netlify.app${product.image}`}
+                 data-item-url={`https://puredairy.netlify.app/products/${product.id}`}
+                 >
+                Add to Cart
+               </button>
+
+ 
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quality Guarantee -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+      <h2 class="text-3xl font-bold text-gray-900 mb-6">Our Quality Guarantee</h2>
+      <p class="text-lg text-gray-600 mb-8">
+        Every product is backed by our 100% satisfaction guarantee. If you're not completely happy with your purchase, 
+        we'll make it right with a full refund or replacement.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="flex flex-col items-center">
+          <div class="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mb-3">
+            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-gray-900">Fresh Guarantee</h3>
+          <p class="text-sm text-gray-600 text-center">Delivered within 48 hours of production</p>
+        </div>
+        
+        <div class="flex flex-col items-center">
+          <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-3">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-gray-900">Quality Tested</h3>
+          <p class="text-sm text-gray-600 text-center">Every batch rigorously tested for quality</p>
+        </div>
+        
+        <div class="flex flex-col items-center">
+          <div class="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mb-3">
+            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-gray-900">Made with Love</h3>
+          <p class="text-sm text-gray-600 text-center">Three generations of dairy expertise</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  .group:hover .group-hover\:scale-105 {
+    transform: scale(1.05);
+  }
+</style>
