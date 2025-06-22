@@ -1,0 +1,164 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Order Summary - Pure Dairy" description="Review your cart and complete your order for fresh dairy products from Pure Dairy.">
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-blue-100 to-green-100 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4" data-aos="fade-up">Your Order</h1>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        Review your selected products and proceed to checkout when you're ready.
+      </p>
+    </div>
+  </section>
+
+  <!-- Cart Summary -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-xl shadow-lg p-8" data-aos="fade-up">
+        <!-- Cart Header -->
+        <div class="flex items-center justify-between mb-8">
+          <h2 class="text-2xl font-bold text-gray-900">Shopping Cart</h2>
+          <div class="flex items-center space-x-4">
+            <span class="snipcart-items-count text-sm text-gray-600">0 items</span>
+            <button class="snipcart-checkout bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
+              Checkout
+            </button>
+          </div>
+        </div>
+        
+        <!-- Empty Cart Message -->
+        <div id="empty-cart" class="text-center py-12">
+          <svg class="w-16 h-16 text-gray-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m1.6 8L5 3H3m4 10v6a1 1 0 001 1h10a1 1 0 001-1v-6M9 19v2m6-2v2"></path>
+          </svg>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Your cart is empty</h3>
+          <p class="text-gray-600 mb-6">Add some delicious dairy products to get started!</p>
+          <a href="/products" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors inline-block">
+            Shop Products
+          </a>
+        </div>
+        
+        <!-- Cart Items will be populated by Snipcart -->
+        <div id="snipcart-cart-summary">
+          <!-- Snipcart will inject cart content here -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order Information -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Delivery Information -->
+        <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="text-lg font-semibold text-gray-900 mb-4">Delivery Information</h3>
+          <div class="space-y-3 text-sm">
+            <div class="flex items-center space-x-2">
+              <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700">Free delivery on orders over $50</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700">Next-day delivery available</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700">Temperature-controlled transport</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700">Delivery within 48 hours of production</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Payment Information -->
+        <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="text-lg font-semibold text-gray-900 mb-4">Payment & Security</h3>
+          <div class="space-y-3 text-sm">
+            <div class="flex items-center space-x-2">
+              <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+              </svg>
+              <span class="text-gray-700">Secure SSL encryption</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
+              </svg>
+              <span class="text-gray-700">All major credit cards accepted</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+              </svg>
+              <span class="text-gray-700">PayPal & Apple Pay supported</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <span class="text-gray-700">100% satisfaction guarantee</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Continue Shopping -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Need Something Else?</h2>
+      <p class="text-gray-600 mb-8">
+        Browse our complete selection of premium dairy products to add to your order.
+      </p>
+      <a href="/products" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-block">
+        Continue Shopping
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Listen for Snipcart events to show/hide empty cart message
+    document.addEventListener('snipcart.ready', function() {
+      // Hide empty cart message when Snipcart is ready and has items
+      const emptyCart = document.getElementById('empty-cart');
+      
+      // Function to check cart status
+      function updateCartDisplay() {
+        const itemCount = window.Snipcart.store.getState().cart.items.length;
+        if (itemCount > 0) {
+          emptyCart.style.display = 'none';
+        } else {
+          emptyCart.style.display = 'block';
+        }
+      }
+      
+      // Initial check
+      updateCartDisplay();
+      
+      // Listen for cart updates
+      window.Snipcart.events.on('cart.updated', updateCartDisplay);
+    });
+  });
+</script>

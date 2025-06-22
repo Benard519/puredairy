@@ -1,0 +1,238 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="About Us - Pure Dairy" description="Learn about our family-owned dairy farm, our commitment to quality, and three generations of dairy excellence.">
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-r from-blue-100 to-green-100 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6" data-aos="fade-up">
+          Our Story
+        </h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+          Three generations of passion, dedication, and love for producing the finest dairy products
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Company History -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-right">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Since 1985</h2>
+          <p class="text-lg text-gray-600 mb-6">
+            Pure Dairy began as a small family farm with a simple mission: to provide the freshest, 
+            highest-quality dairy products to our local community. What started with just a handful 
+            of cows has grown into a trusted name in premium dairy products.
+          </p>
+          <p class="text-lg text-gray-600 mb-6">
+            Our founder, John Miller, believed that great dairy products start with happy, healthy cows 
+            and sustainable farming practices. Today, his son Michael and grandson Jake continue that 
+            tradition, combining time-tested methods with modern technology to ensure every product 
+            meets our exacting standards.
+          </p>
+          <p class="text-lg text-gray-600">
+            We're proud to be a third-generation family business that still maintains the personal 
+            touch and commitment to quality that our customers have come to expect and love.
+          </p>
+        </div>
+        <div data-aos="fade-left">
+          <img 
+            src="https://images.pexels.com/photos/248412/pexels-photo-248412.jpeg?auto=compress&cs=tinysrgb&w=800" 
+            alt="Family farm history" 
+            class="w-full h-96 object-cover rounded-xl shadow-lg"
+            loading="lazy"
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Values</h2>
+        <p class="text-xl text-gray-600">The principles that guide everything we do</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Quality First</h3>
+          <p class="text-gray-600">
+            We never compromise on quality. Every product is carefully crafted and tested to meet 
+            our strict standards before it reaches your table.
+          </p>
+        </div>
+        
+        <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Sustainability</h3>
+          <p class="text-gray-600">
+            We're committed to sustainable farming practices that protect our environment and 
+            ensure the well-being of our animals for generations to come.
+          </p>
+        </div>
+        
+        <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+          <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Community</h3>
+          <p class="text-gray-600">
+            We believe in giving back to our community and supporting local families with 
+            nutritious, affordable dairy products.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Farm Photos -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Life on the Farm</h2>
+        <p class="text-xl text-gray-600">Take a glimpse into our daily operations and meet our happy cows</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="farm-photo-container" data-aos="fade-up" data-aos-delay="100">
+          <img 
+            src="https://images.pexels.com/photos/248412/pexels-photo-248412.jpeg?auto=compress&cs=tinysrgb&w=600" 
+            alt="Cows grazing in green pasture" 
+            class="farm-photo w-full h-64 object-cover rounded-lg shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
+            loading="lazy"
+            onclick="openLightbox(this)"
+          >
+        </div>
+        <div class="farm-photo-container" data-aos="fade-up" data-aos-delay="200">
+          <img 
+            src="https://images.pexels.com/photos/1435740/pexels-photo-1435740.jpeg?auto=compress&cs=tinysrgb&w=600" 
+            alt="Milking process in our clean facility" 
+            class="farm-photo w-full h-64 object-cover rounded-lg shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
+            loading="lazy"
+            onclick="openLightbox(this)"
+          >
+        </div>
+        <div class="farm-photo-container" data-aos="fade-up" data-aos-delay="300">
+          <img 
+            src="https://images.pexels.com/photos/890001/pexels-photo-890001.jpeg?auto=compress&cs=tinysrgb&w=600" 
+            alt="Fresh dairy products ready for delivery" 
+            class="farm-photo w-full h-64 object-cover rounded-lg shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
+            loading="lazy"
+            onclick="openLightbox(this)"
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Certifications</h2>
+        <p class="text-xl text-gray-600">Trusted certifications that guarantee our quality and safety standards</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-green-600 font-bold text-sm">USDA</span>
+          </div>
+          <h3 class="font-semibold text-gray-900 mb-2">USDA Organic</h3>
+          <p class="text-sm text-gray-600">Certified organic for select products</p>
+        </div>
+        
+        <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-blue-600 font-bold text-sm">FDA</span>
+          </div>
+          <h3 class="font-semibold text-gray-900 mb-2">FDA Approved</h3>
+          <p class="text-sm text-gray-600">All facilities FDA inspected and approved</p>
+        </div>
+        
+        <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+          <div class="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-green-600 font-bold text-sm">GAP</span>
+          </div>
+          <h3 class="font-semibold text-gray-900 mb-2">Good Agricultural Practices</h3>
+          <p class="text-sm text-gray-600">Certified for sustainable farming</p>
+        </div>
+        
+        <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+          <div class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-blue-600 font-bold text-sm">LOCAL</span>
+          </div>
+          <h3 class="font-semibold text-gray-900 mb-2">Local Farm Certified</h3>
+          <p class="text-sm text-gray-600">Proud member of local farm network</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+    <div class="relative max-w-4xl max-h-full p-4">
+      <img id="lightbox-image" src="" alt="" class="max-w-full max-h-full object-contain">
+      <button 
+        onclick="closeLightbox()" 
+        class="absolute top-4 right-4 text-white text-2xl hover:text-gray-300 transition-colors"
+      >
+        ×
+      </button>
+    </div>
+  </div>
+
+  <Footer />
+</Layout>
+
+<script>
+  function openLightbox(img) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    lightboxImage.src = img.src;
+    lightboxImage.alt = img.alt;
+    lightbox.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.classList.add('hidden');
+    document.body.style.overflow = 'auto';
+  }
+
+  // ESC key to close lightbox
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeLightbox();
+    }
+  });
+
+  // Click outside to close lightbox
+  document.getElementById('lightbox').addEventListener('click', function(e) {
+    if (e.target === this) {
+      closeLightbox();
+    }
+  });
+</script>

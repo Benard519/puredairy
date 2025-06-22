@@ -1,0 +1,212 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Contact Us - Pure Dairy" description="Get in touch with Pure Dairy. We're here to help with your questions about our premium dairy products and services.">
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-blue-100 to-green-100 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4" data-aos="fade-up">Contact Us</h1>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        We'd love to hear from you! Get in touch with any questions about our products or services.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Information -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Contact Form -->
+        <div data-aos="fade-right">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Send us a Message</h2>
+          <form action="https://formspree.io/f/xdkzzzrq" method="POST" class="space-y-6">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                required 
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                placeholder="Your full name"
+              >
+            </div>
+            
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required 
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                placeholder="your@email.com"
+              >
+            </div>
+            
+            <div>
+              <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+              <input 
+                type="tel" 
+                id="phone" 
+                name="phone" 
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                placeholder="(123) 456-7890"
+              >
+            </div>
+            
+            <div>
+              <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+              <select 
+                id="subject" 
+                name="subject" 
+                required 
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+              >
+                <option value="">Select a subject</option>
+                <option value="General Inquiry">General Inquiry</option>
+                <option value="Product Question">Product Question</option>
+                <option value="Order Support">Order Support</option>
+                <option value="Delivery Issue">Delivery Issue</option>
+                <option value="Farm Tour">Farm Tour Request</option>
+                <option value="Wholesale">Wholesale Inquiry</option>
+              </select>
+            </div>
+            
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+              <textarea 
+                id="message" 
+                name="message" 
+                rows="5" 
+                required 
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                placeholder="Tell us how we can help you..."
+              ></textarea>
+            </div>
+            
+            <button 
+              type="submit" 
+              class="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors shadow-lg hover:shadow-xl"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+        
+        <!-- Contact Information -->
+        <div data-aos="fade-left">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
+          
+          <div class="space-y-6 mb-8">
+            <div class="flex items-start space-x-4">
+              <div class="bg-blue-100 p-3 rounded-lg">
+                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-1">Visit Our Farm</h3>
+                <p class="text-gray-600">
+                  123 Dairy Farm Road<br>
+                  Countryside, State 12345<br>
+                  United States
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-4">
+              <div class="bg-green-100 p-3 rounded-lg">
+                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-1">Call Us</h3>
+                <p class="text-gray-600">
+                  <a href="tel:+1234567890" class="hover:text-blue-600 transition-colors">(123) 456-7890</a><br>
+                  <span class="text-sm text-gray-500">Mon-Fri: 8AM-6PM, Sat: 8AM-4PM</span>
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-4">
+              <div class="bg-blue-100 p-3 rounded-lg">
+                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-1">Email Us</h3>
+                <p class="text-gray-600">
+                  <a href="mailto:info@puredairy.com" class="hover:text-blue-600 transition-colors">info@puredairy.com</a><br>
+                  <a href="mailto:orders@puredairy.com" class="hover:text-blue-600 transition-colors">orders@puredairy.com</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Business Hours -->
+          <div class="bg-gray-50 p-6 rounded-lg">
+            <h3 class="font-semibold text-gray-900 mb-4">Business Hours</h3>
+            <div class="space-y-2 text-sm">
+              <div class="flex justify-between">
+                <span class="text-gray-600">Monday - Friday</span>
+                <span class="text-gray-900 font-medium">8:00 AM - 6:00 PM</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Saturday</span>
+                <span class="text-gray-900 font-medium">8:00 AM - 4:00 PM</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Sunday</span>
+                <span class="text-gray-900 font-medium">Closed</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Farm Tours -->
+          <div class="bg-green-50 p-6 rounded-lg mt-6">
+            <h3 class="font-semibold text-gray-900 mb-2">Farm Tours Available!</h3>
+            <p class="text-sm text-gray-600 mb-3">
+              Visit our farm every Saturday at 10 AM and 2 PM. See our cows, learn about our process, 
+              and enjoy free samples of our products.
+            </p>
+            <p class="text-xs text-gray-500">
+              Please call ahead to reserve your spot. Tours are free and family-friendly!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form');
+    
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        const submitButton = this.querySelector('button[type="submit"]');
+        submitButton.textContent = 'Sending...';
+        submitButton.disabled = true;
+        
+        // Form will be submitted to Formspree
+        setTimeout(() => {
+          // This will only run if there's an error
+          submitButton.textContent = 'Send Message';
+          submitButton.disabled = false;
+        }, 1000);
+      });
+    }
+  });
+</script>
